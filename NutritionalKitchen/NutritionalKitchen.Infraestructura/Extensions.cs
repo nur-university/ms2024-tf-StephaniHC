@@ -15,6 +15,7 @@ using NutritionalKitchen.Infraestructura.DomainModel;
 using Microsoft.EntityFrameworkCore;
 using NutritionalKitchen.Domain.Package;
 using NutritionalKitchen.Domain.KitchenManager;
+using NutritionalKitchen.Domain.Recipe;
 
 namespace NutritionalKitchen.Infraestructura
 {
@@ -36,6 +37,8 @@ namespace NutritionalKitchen.Infraestructura
             services.AddScoped<IIngredientsRepository, IngredientsRepository>();
             services.AddScoped<IPackageRepository, PackageRepository>();
             services.AddScoped<IKitchenManagerRepository, KitchenManagerRepository>();
+            services.AddScoped<ILabelRepository, LabelRepository>();
+            services.AddScoped<IRecipeRepository, RecipeRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddAplication();

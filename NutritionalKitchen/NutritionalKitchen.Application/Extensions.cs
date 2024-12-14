@@ -24,6 +24,8 @@ namespace NutritionalKitchen.Application
             services.AddSingleton<IIngredientFactory, IngredientFactory>();
             services.AddSingleton<IKitchenManagerFactory, KitchenManagerFactory>();
             services.AddSingleton<IPackageFactory, PackageFactory>();
+            services.AddSingleton<ILabelFactory, LabelFactory>();
+            services.AddSingleton<IRecipeFactory, RecipeFactory>();
 
 
             return services;

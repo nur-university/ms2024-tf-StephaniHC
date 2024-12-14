@@ -14,6 +14,8 @@ namespace NutritionalKitchen.Infraestructura.StoredModel
         public DbSet<IngredientsStoredModel> Ingredients { get; set; }
         public DbSet<PackageStoredModel> Package { get; set; }
         public DbSet<KitchenManagerStoredModel> KitchenManager { get; set; }
+        public DbSet<LabelStoredModel> Label { get; set; }
+        public DbSet<RecipeStoredModel> Recipe { get; set; }
 
         public StoredDbContext(DbContextOptions<StoredDbContext> options) : base(options)
         {

@@ -8,6 +8,8 @@ using NutritionalKitchen.Application.Package.GetPackages;
 
 namespace NutritionalKitchen.WebApi.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class PackageController : ControllerBase
     {
         private readonly IMediator _mediator;

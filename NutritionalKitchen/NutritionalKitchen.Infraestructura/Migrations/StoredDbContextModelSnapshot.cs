@@ -61,6 +61,43 @@ namespace NutritionalKitchen.Infraestructura.Migrations
                     b.ToTable("kitchenManager");
                 });
 
+            modelBuilder.Entity("NutritionalKitchen.Infraestructura.StoredModel.Entities.LabelStoredModel", b =>
+                {
+                    b.Property<Guid>("BatchCode")
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(50)
+                        .HasColumnType("char(50)")
+                        .HasColumnName("batchCode");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("varchar(250)")
+                        .HasColumnName("address");
+
+                    b.Property<string>("Detail")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("varchar(500)")
+                        .HasColumnName("detail");
+
+                    b.Property<DateTime>("ExpirationDate")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("expirationDate");
+
+                    b.Property<Guid>("PatientId")
+                        .HasColumnType("char(36)")
+                        .HasColumnName("patientId");
+
+                    b.Property<DateTime>("ProductionDate")
+                        .HasColumnType("datetime(6)")
+                        .HasColumnName("productionDate");
+
+                    b.HasKey("BatchCode");
+
+                    b.ToTable("label");
+                });
+
             modelBuilder.Entity("NutritionalKitchen.Infraestructura.StoredModel.Entities.PackageStoredModel", b =>
                 {
                     b.Property<Guid>("Id")
@@ -86,6 +123,30 @@ namespace NutritionalKitchen.Infraestructura.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("package");
+                });
+
+            modelBuilder.Entity("NutritionalKitchen.Infraestructura.StoredModel.Entities.RecipeStoredModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)")
+                        .HasColumnName("id");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("varchar(250)")
+                        .HasColumnName("name");
+
+                    b.Property<string>("PreparationTime")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("preparationTime");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("recipe");
                 });
 #pragma warning restore 612, 618
         }

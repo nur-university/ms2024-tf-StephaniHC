@@ -9,13 +9,13 @@ namespace NutritionalKitchen.Domain.Package
 {
     public class Label : AggregateRoot
     {
-        public string BatchCode { get; private set; }
+        public Guid BatchCode { get; private set; }
         public DateTime ProductionDate { get; private set; }
         public DateTime ExpirationDate { get; private set; }
         public string Detail { get; private set; }
         public string Address { get; private set; }
         public Guid PatientId { get; private set; }
-        public Label(string batchCode, DateTime productionDate, DateTime expirationDate, string detail, string address, Guid patientId) : base(Guid.NewGuid())
+        public Label(Guid batchCode, DateTime productionDate, DateTime expirationDate, string detail, string address, Guid patientId) : base(Guid.NewGuid())
         {
             BatchCode = batchCode;
             ProductionDate = productionDate;

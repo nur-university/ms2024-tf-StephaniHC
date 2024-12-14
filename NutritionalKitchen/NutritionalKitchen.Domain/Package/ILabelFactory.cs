@@ -8,7 +8,7 @@ namespace NutritionalKitchen.Domain.Package
 {
     public interface ILabelFactory
     {
-        Label Create(string batchCode, DateTime productionDate, DateTime expirationDate, Guid patientId, string detail, string address);
+        Label Create(Guid batchCode, DateTime productionDate, DateTime expirationDate, string detail, string address, Guid patientId);
     }
 
 }

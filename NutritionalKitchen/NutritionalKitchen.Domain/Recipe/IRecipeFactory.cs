@@ -8,6 +8,6 @@ namespace NutritionalKitchen.Domain.Recipe
 {
     public interface IRecipeFactory
     {
-        Recipe Create(Guid id, string name, string preparationTime);
+        Recipe Create(Guid Id, string Name, string PreparationTime);
     }
 }

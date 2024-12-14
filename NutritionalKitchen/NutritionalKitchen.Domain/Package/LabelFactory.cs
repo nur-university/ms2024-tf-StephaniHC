@@ -8,9 +8,9 @@ namespace NutritionalKitchen.Domain.Package
 {
     public class LabelFactory : ILabelFactory
     {
-        public Label Create(string batchCode, DateTime productionDate, DateTime expirationDate, Guid patientId, string detail, string address)
+        Label ILabelFactory.Create(Guid batchCode, DateTime productionDate, DateTime expirationDate, string detail, string address, Guid patientId)
         {
-            if (string.IsNullOrWhiteSpace(batchCode))
+            if (batchCode == Guid.Empty)
             {
                 throw new ArgumentException("Batch code is required", nameof(batchCode));
             }
@@ -32,6 +32,7 @@ namespace NutritionalKitchen.Domain.Package
 
             return new Label(batchCode, productionDate, expirationDate, detail, address, patientId);
         }
+         
     }
 
 }
