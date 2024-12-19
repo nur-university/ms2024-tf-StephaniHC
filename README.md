@@ -1,10 +1,11 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/52Oc7Ap-)
-![MicroservicioCocina drawio](https://github.com/user-attachments/assets/1ab00343-ff3d-4130-8699-4771fcd0cd98)
+ ![MicroservicioCocina drawio (1)](https://github.com/user-attachments/assets/1995da74-26de-4f9f-8878-e981dea39759)
+
 
 # 📦 Microservicio "Cocina"
 
 ## **Descripción General**  
-El microservicio **"Cocina"** gestiona la preparación de recetas, los paquetes asociados, ingredientes utilizados y el administrador de cocina. Está compuesto por entidades, agregados y objetos de valor que organizan la información de forma eficiente.
+El microservicio **"Cocina"** gestiona la preparación de recetas, los paquetes asociados, ingredientes utilizados y el encargado de cocina. Está compuesto por entidades, agregados y objetos de valor que organizan la información de forma eficiente.
 
 
 
